@@ -35,6 +35,7 @@ __WEAK __NO_RETURN void osRtxIdleThread (void *argument) {
   (void)argument;
 
   for (;;) {
+		UDEBUG_TOGGLE(UDBG_1);
 	}
 }
  

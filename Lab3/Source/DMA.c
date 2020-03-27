@@ -81,6 +81,8 @@ void Restart_DMA_Playback() {
 
 
 void DMA0_IRQHandler(void) {
+	// Set debug bit
+	UDEBUG_START(UDBG_2)
 	// Clear done flag 
 	DMA0->DMA[0].DSR_BCR = DMA_DSR_BCR_DONE_MASK; 
 #if USE_DOUBLE_BUFFER		
@@ -91,5 +93,7 @@ void DMA0_IRQHandler(void) {
 	osThreadFlagsSet(t_Refill_Sound_Buffer, EV_REFILL_SOUND_BUFFER);
 	// Start playback again
 	Restart_DMA_Playback();
+	// Clear debug bit
+	UDEBUG_STOP(UDBG_2)
 }
 // *******************************ARM University Program Copyright © ARM Ltd 2013*************************************   
