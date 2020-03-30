@@ -94,6 +94,6 @@ void DMA0_IRQHandler(void) {
 	// Start playback again
 	Restart_DMA_Playback();
 	// Clear debug bit
-	UDEBUG_STOP(UDBG_2)
+	//UDEBUG_STOP(UDBG_2)
 }
 // *******************************ARM University Program Copyright © ARM Ltd 2013*************************************   

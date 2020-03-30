@@ -214,7 +214,10 @@ void Play_Waveform_with_DMA(void) {
 				}
 				sum = sum + (MAX_DAC_CODE/2);
 				sum = MIN(sum, MAX_DAC_CODE-1);
-				Waveform[wr_nrd_buffer_num][i] = sum; 
+				Waveform[wr_nrd_buffer_num][i] = sum;
+				
+				// Clear debug bit
+				UDEBUG_STOP(UDBG_2)
 			}
 		} else if (flags & EV_UPDATE_SOUND_BUFFER) {
 //			for (i=0; i<NUM_WAVEFORM_SAMPLES; i++) { // update rd buffer with new samples
