@@ -9,7 +9,7 @@
 #define NUM_VOICES (8)
 #define AUDIO_SAMPLE_FREQ (20000.0f)
 #define NUM_STEPS (128) // in sine table for synthesis
-#define USE_DOUBLE_BUFFER (0)
+#define USE_DOUBLE_BUFFER (1)
 
 #if USE_DOUBLE_BUFFER
 #define NUM_WAVEFORM_SAMPLES (256)
