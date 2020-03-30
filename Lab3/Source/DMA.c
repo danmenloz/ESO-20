@@ -89,10 +89,10 @@ void DMA0_IRQHandler(void) {
 	// switch to other buffer
 	wr_nrd_buffer_num = 1 - wr_nrd_buffer_num;
 #endif
-	// Signal event requesting source buffer refill
-	osThreadFlagsSet(t_Refill_Sound_Buffer, EV_REFILL_SOUND_BUFFER);
 	// Start playback again
 	Restart_DMA_Playback();
+	// Signal event requesting source buffer refill
+	osThreadFlagsSet(t_Refill_Sound_Buffer, EV_REFILL_SOUND_BUFFER);
 	// Clear debug bit
 	//UDEBUG_STOP(UDBG_2)
 }

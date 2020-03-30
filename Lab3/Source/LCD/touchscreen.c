@@ -48,7 +48,7 @@ position unchanged. */
 uint32_t LCD_TS_Read(PT_T * position) {
 	// Beginnig of subthread A is actually when the thread begins
 	// use this bit to have a trigger
-	//UDEBUG_START(UDBG_3);
+	UDEBUG_START(UDBG_3);
 	
 	uint32_t x, y;
 	uint32_t b;
@@ -167,7 +167,7 @@ uint32_t LCD_TS_Read(PT_T * position) {
 			position->Y = y;
 		}
 		// Debub bit at the end of subthread D
-		//UDEBUG_STOP(UDBG_3);
+		UDEBUG_STOP(UDBG_3);
 		
 		return 1; // screen pressed
 	}
