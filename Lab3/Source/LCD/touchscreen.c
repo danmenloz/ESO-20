@@ -46,6 +46,10 @@ static uint16_t xl=0, yu=0;
 /* Read touch screen. Returns 1 if touched, and updates position. Else returns 0 leaving 
 position unchanged. */
 uint32_t LCD_TS_Read(PT_T * position) {
+	// Beginnig of subthread A is actually when the thread begins
+	// use this bit to have a trigger
+	//UDEBUG_START(UDBG_3);
+	
 	uint32_t x, y;
 	uint32_t b;
 
@@ -82,6 +86,9 @@ uint32_t LCD_TS_Read(PT_T * position) {
 		// Screen not pressed
 		return 0;
 	} else {
+		// Begginnig of subthread B
+		//UDEBUG_START(UDBG_3);
+		
 		// Read X Position
 		// Configure inputs to ADC
 		LCD_TS_YU_PORT->PCR[LCD_TS_YU_BIT] &= ~PORT_PCR_MUX_MASK;
@@ -109,6 +116,9 @@ uint32_t LCD_TS_Read(PT_T * position) {
 		yu = ADC0->R[0];
 		x = yu;
 
+		// Begginnig of subthread C
+		//UDEBUG_START(UDBG_3);
+		
 		// Read Y Position
 		// Configure inputs to ADC
 		LCD_TS_XL_PORT->PCR[LCD_TS_XL_BIT] &= ~PORT_PCR_MUX_MASK;
@@ -136,6 +146,9 @@ uint32_t LCD_TS_Read(PT_T * position) {
 			;
 		xl = ADC0->R[0];
 		y = xl;
+		
+		// Begginnig of subthread D
+		//UDEBUG_STOP(UDBG_3);
 
 		// Apply calibration factors to raw position information
 		if (LCD_TS_Calibrated) {
@@ -153,7 +166,10 @@ uint32_t LCD_TS_Read(PT_T * position) {
 			position->X = x;
 			position->Y = y;
 		}
-		return 1;
+		// Debub bit at the end of subthread D
+		//UDEBUG_STOP(UDBG_3);
+		
+		return 1; // screen pressed
 	}
 }
 
