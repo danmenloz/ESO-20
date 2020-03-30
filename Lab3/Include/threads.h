@@ -14,7 +14,7 @@
 #define THREAD_RA_PRIO 		osPriorityNormal
 #define THREAD_US_PRIO 		osPriorityNormal
 #define THREAD_SM_PRIO 		osPriorityNormal
-#define THREAD_RSB_PRIO 	osPriorityNormal
+#define THREAD_RSB_PRIO 	osPriorityAboveNormal //osPriorityNormal
 
 #define USE_LCD_MUTEX (1)
 
