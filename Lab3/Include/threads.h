@@ -11,9 +11,9 @@
 #define THREAD_UPDATE_SCREEN_PERIOD_MS (50)
 
 #define THREAD_RTS_PRIO 	osPriorityNormal
-#define THREAD_RA_PRIO 		osPriorityNormal
-#define THREAD_US_PRIO 		osPriorityNormal
-#define THREAD_SM_PRIO 		osPriorityNormal
+#define THREAD_RA_PRIO 		osPriorityNormal2
+#define THREAD_US_PRIO 		osPriorityNormal1
+#define THREAD_SM_PRIO 		osPriorityNormal3
 #define THREAD_RSB_PRIO 	osPriorityAboveNormal //osPriorityNormal
 
 #define USE_LCD_MUTEX (1)
