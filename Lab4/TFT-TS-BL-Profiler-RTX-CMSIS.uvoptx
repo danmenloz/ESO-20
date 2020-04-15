@@ -103,7 +103,7 @@
         <bEvRecOn>1</bEvRecOn>
         <bSchkAxf>0</bSchkAxf>
         <bTchkAxf>0</bTchkAxf>
-        <nTsel>4</nTsel>
+        <nTsel>8</nTsel>
         <sDll></sDll>
         <sDllPa></sDllPa>
         <sDlgDll></sDlgDll>
@@ -114,7 +114,7 @@
         <tDlgDll></tDlgDll>
         <tDlgPa></tDlgPa>
         <tIfile></tIfile>
-        <pMon>Segger\JL2CM3.dll</pMon>
+        <pMon>PEMicro\Pemicro_ArmCortexInterface.dll</pMon>
       </DebugOpt>
       <TargetDriverDllRegistry>
         <SetRegEntry>
@@ -130,17 +130,17 @@
         <SetRegEntry>
           <Number>0</Number>
           <Key>DLGUARM</Key>
-          <Name>”øo</Name>
+          <Name></Name>
         </SetRegEntry>
         <SetRegEntry>
           <Number>0</Number>
           <Key>Pemicro_ArmCortexInterface</Key>
-          <Name>-S0 -B0 -O0</Name>
+          <Name>-U -O0 -S0 -C0 -TO0 -TC0 -TP0 -TDS0 -TDT0 -TDC0 -TIE0 -TIP0 -FO0 -FD0 -FC0 -FN0</Name>
         </SetRegEntry>
         <SetRegEntry>
           <Number>0</Number>
           <Key>CMSIS_AGDI</Key>
-          <Name>-X"OpenSDA CMSIS-DAP" -UA000000001 -O2542 -S0 -C0 -P00 -N00("ARM CoreSight SW-DP") -D00(0BC11477) -L00(0) -TO18 -TC10000000 -TP20 -TDS8007 -TDT0 -TDC1F -TIEFFFFFFFF -TIP8 -FO15 -FD1FFFF000 -FC4000 -FN1 -FF0MK_P128_48MHZ.FLM -FS00 -FL020000 -FP0($$Device:MKL25Z128xxx4$Flash\MK_P128_48MHZ.FLM)</Name>
+          <Name>-X"OpenSDA CMSIS-DAP" -UA000000001 -O2542 -S0 -C0 -P00000000 -N00("ARM CoreSight SW-DP") -D00(0BC11477) -L00(0) -TO65554 -TC10000000 -TT10000000 -TP20 -TDS8007 -TDT0 -TDC1F -TIEFFFFFFFF -TIP8 -FO15 -FD1FFFF000 -FC4000 -FN1 -FF0MK_P128_48MHZ.FLM -FS00 -FL020000 -FP0($$Device:MKL25Z128xxx4$Flash\MK_P128_48MHZ.FLM)</Name>
         </SetRegEntry>
         <SetRegEntry>
           <Number>0</Number>
@@ -168,24 +168,7 @@
           <Name>UL2CM3(-S0 -C0 -P0 -FD1FFFF000 -FC4000 -FN1 -FF0MK_P128_48MHZ -FS00 -FL020000 -FP0($$Device:MKL25Z128xxx4$Flash\MK_P128_48MHZ.FLM))</Name>
         </SetRegEntry>
       </TargetDriverDllRegistry>
-      <Breakpoint>
-        <Bp>
-          <Number>0</Number>
-          <Type>0</Type>
-          <LineNumber>109</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>3656</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>C:\Users\Alex\Documents\Teaching\ESO\ESO-2019\Code\ESO-19\Lab3\new_events.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\TFT_TS_BL_Profiler_RTX_CMSIS\new_events.c\109</Expression>
-        </Bp>
-      </Breakpoint>
+      <Breakpoint/>
       <WatchWindow1>
         <Ww>
           <count>0</count>
@@ -234,12 +217,12 @@
         </Mm>
       </MemoryWindow1>
       <ScvdPack>
-        <Filename>C:\Users\Alex\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\RTOS2\RTX\RTX5.scvd</Filename>
+        <Filename>C:\Users\masterdan\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\RTOS2\RTX\RTX5.scvd</Filename>
         <Type>ARM.CMSIS.5.6.0</Type>
         <SubType>1</SubType>
       </ScvdPack>
       <ScvdPack>
-        <Filename>C:\Users\Alex\AppData\Local\Arm\Packs\Keil\ARM_Compiler\1.6.2\EventRecorder.scvd</Filename>
+        <Filename>C:\Users\masterdan\AppData\Local\Arm\Packs\Keil\ARM_Compiler\1.6.2\EventRecorder.scvd</Filename>
         <Type>Keil.ARM_Compiler.1.6.2</Type>
         <SubType>1</SubType>
       </ScvdPack>
@@ -1070,7 +1053,7 @@
 
   <Group>
     <GroupName>::CMSIS</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>1</RteFlg>

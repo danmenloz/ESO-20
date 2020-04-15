@@ -81,7 +81,7 @@
           </BeforeMake>
           <AfterMake>
             <RunUserProg1>0</RunUserProg1>
-            <RunUserProg2>0</RunUserProg2>
+            <RunUserProg2>1</RunUserProg2>
             <UserProg1Name>Scripts\update_regions_MDK.bat</UserProg1Name>
             <UserProg2Name>Scripts\find_sizes.bat !L</UserProg2Name>
             <UserProg1Dos16Mode>0</UserProg1Dos16Mode>
@@ -169,9 +169,9 @@
             <AdsLsym>1</AdsLsym>
             <AdsLszi>1</AdsLszi>
             <AdsLtoi>1</AdsLtoi>
-            <AdsLsun>0</AdsLsun>
-            <AdsLven>0</AdsLven>
-            <AdsLsxf>0</AdsLsxf>
+            <AdsLsun>1</AdsLsun>
+            <AdsLven>1</AdsLven>
+            <AdsLsxf>1</AdsLsxf>
             <RvctClst>0</RvctClst>
             <GenPPlst>0</GenPPlst>
             <AdsCpuType>"Cortex-M0+"</AdsCpuType>
@@ -188,14 +188,14 @@
             <hadIRAM2>0</hadIRAM2>
             <hadIROM2>0</hadIROM2>
             <StupSel>8</StupSel>
-            <useUlib>0</useUlib>
+            <useUlib>1</useUlib>
             <EndSel>0</EndSel>
             <uLtcg>0</uLtcg>
             <nSecure>0</nSecure>
             <RoSelD>3</RoSelD>
             <RwSelD>3</RwSelD>
             <CodeSel>0</CodeSel>
-            <OptFeed>0</OptFeed>
+            <OptFeed>1</OptFeed>
             <NoZi1>0</NoZi1>
             <NoZi2>0</NoZi2>
             <NoZi3>0</NoZi3>

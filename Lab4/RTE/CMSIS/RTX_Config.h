@@ -183,7 +183,7 @@
 //   <i> Enable stack overrun checks at thread switch.
 //   <i> Enabling this option increases slightly the execution time of a thread switch.
 #ifndef OS_STACK_CHECK
-#define OS_STACK_CHECK              0
+#define OS_STACK_CHECK              1
 #endif
  
 //   <q>Stack usage watermark
