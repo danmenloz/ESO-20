@@ -1,0 +1,1 @@
+gc ..\Objects\function_sizes.txt | sort | get-unique > o.txt
