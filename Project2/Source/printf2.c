@@ -162,6 +162,7 @@ static int prints (char **out, const char *string, int width, int pad)
 //****************************************************************************
 /* the following should be enough for 32 bit int */
 //  -2,147,483,648
+#ifndef ONLY_F
 static int printi (char **out, int i, uint base, int sign, int width, int pad, int letbase)
 {
 	char print_buf[PRINT_BUF_LEN];
@@ -204,6 +205,7 @@ static int printi (char **out, int i, uint base, int sign, int width, int pad, i
    }
 	return pc + prints (out, s, width, pad);
 }
+#endif
 
 //****************************************************************************
 /* the following should be enough for 64 bit int, without commas */
@@ -213,6 +215,7 @@ static int printi (char **out, int i, uint base, int sign, int width, int pad, i
 // 18446744073709551615 (0xffffffffffffffff)
 // -9223372036854775808
 // 18,446,744,073,709,551,615
+#ifndef ONLY_F
 static int printlli (char **out, long long i, uint base, int sign, int width, int pad, int letbase)
 {
    char print_buf[PRINT_LLBUF_LEN];
@@ -255,6 +258,7 @@ static int printlli (char **out, long long i, uint base, int sign, int width, in
    }
    return pc + prints (out, s, width, pad);
 }
+#endif
 
 //****************************************************************************
 static int print (char **out, int *varg)
@@ -264,7 +268,9 @@ static int print (char **out, int *varg)
    unsigned dec_width = 6 ;
    int pc = 0;
    char *format = (char *) (*varg++);
+#ifndef ONLY_F	
    char scr[2];
+#endif
    use_leading_plus = 0 ;  //  start out with this clear
 	for (; *format != 0; ++format) {
 		if (*format == '%') {
@@ -310,17 +316,22 @@ static int print (char **out, int *varg)
                }
             }
          }
+#ifndef ONLY_F						
          uint use_longlong = 0 ;
          long long *uvarg ;
          long long llvalue ;
+#endif
          if (*format == 'l') {
             ++format;
             if (*format == 'l') {
                ++format;
+#ifndef ONLY_F	
                use_longlong = 1 ;
+#endif
             }
          }
          switch (*format) {
+#ifndef ONLY_F					 
          case 's':
             {
             // char *s = *((char **) varg++);   //lint !e740
@@ -385,7 +396,7 @@ static int print (char **out, int *varg)
             pc += prints (out, scr, width, pad);
             use_leading_plus = 0 ;  //  reset this flag after printing one value
             break;
-
+#endif
          case 'f':
             {
             double *dblptr = (double *) varg ;  //lint !e740 !e826  convert to double pointer

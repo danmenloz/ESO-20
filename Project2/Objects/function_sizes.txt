@@ -1,8 +1,6 @@
 00000284 dbl2stri
-00000484 print
+00000250 print
 00000096 printchar
-00000158 printi
-00000176 printlli
 00000112 prints
 00000036 LCD_24S_Write_Command
 00000036 LCD_24S_Write_Data
@@ -57,7 +55,6 @@
 00000002 HardFault_Handler
 00000044 __aeabi_uidivmod
 00000040 __aeabi_idivmod
-00000096 __aeabi_uldivmod
 00000036 __aeabi_memcpy
 00000014 __aeabi_memset
 00000004 __aeabi_memclr
@@ -66,16 +63,14 @@
 00000008 __aeabi_fsub
 00000008 __aeabi_frsub
 00000122 __aeabi_fmul
-00000022 __aeabi_i2f
-00000014 __aeabi_ui2f
-00000010 EventRecorderTimerGetCount
-00000002 __scatterload_null
-00000002 osRtxErrorNotify
 00000124 __aeabi_fdiv
+00000022 __aeabi_i2f
+00000006 OS_Tick_GetIRQn
 00000328 __aeabi_dadd
 00000012 __aeabi_dsub
 00000012 __aeabi_drsub
 00000202 __aeabi_dmul
+00000014 __aeabi_ui2f
 00000024 __aeabi_ui2d
 00000050 __aeabi_f2iz
 00000040 __aeabi_f2uiz
@@ -102,6 +97,7 @@
 00000018 Delay
 00000058 EventRecord2
 00000096 EventRecord4
+00000010 EventRecorderTimerGetCount
 00000014 EvrRtxDelay
 00000014 EvrRtxDelayCompleted
 00000016 EvrRtxDelayError
@@ -164,7 +160,6 @@
 00000048 LCD_Write_Rectangle_Pixel
 00000006 OS_Tick_AcknowledgeIRQ
 00000032 OS_Tick_Enable
-00000006 OS_Tick_GetIRQn
 00000062 OS_Tick_Setup
 00000130 PIT_IRQHandler
 00000092 PWM_Init
@@ -192,6 +187,7 @@
 00000014 __mathlib_flt_underflow
 00000366 __mathlib_rredf2
 00000014 __scatterload_copy
+00000002 __scatterload_null
 00000014 __scatterload_zeroinit
 00000006 __set_errno
 00000204 approx_atan2f
@@ -217,6 +213,7 @@
 00000038 osMutexAcquire
 00000032 osMutexNew
 00000034 osMutexRelease
+00000002 osRtxErrorNotify
 00000002 osRtxIdleThread
 00000002 osRtxKernelPreInit
 00000108 osRtxMemoryAlloc

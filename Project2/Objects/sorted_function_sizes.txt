@@ -1,6 +1,5 @@
 00000550 LCD_Text_PrintChar
 00000510 LCD_Draw_Line
-00000484 print
 00000456 svcRtxThreadNew
 00000394 LCD_TS_Read
 00000366 __mathlib_rredf2
@@ -12,6 +11,7 @@
 00000284 dbl2stri
 00000276 Sound_Init
 00000262 svcRtxMessageQueueGet
+00000250 print
 00000240 svcRtxMessageQueuePut
 00000238 Thread_Refill_Sound_Buffer
 00000234 Thread_Update_Screen
@@ -22,12 +22,10 @@
 00000202 __aeabi_dmul
 00000186 SystemInit
 00000186 svcRtxMutexRelease
-00000176 printlli
 00000174 LCD_GPIO_Init
 00000164 Thread_Read_TS
 00000164 _double_epilogue
 00000162 __aeabi_fadd
-00000158 printi
 00000152 svcRtxMutexAcquire
 00000150 LCD_Start_Rectangle
 00000148 osMessageQueuePut
@@ -58,7 +56,6 @@
 00000100 svcRtxMutexNew
 00000096 printchar
 00000096 EventRecord4
-00000096 __aeabi_uldivmod
 00000094 osRtxThreadDelayInsert
 00000092 PWM_Init
 00000092 osRtxTimerTick

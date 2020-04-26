@@ -27,6 +27,10 @@ extern int (putchar)(int /*c*/);
 // Uncoment to test code
 // #define  TEST_PRINTF
 
+// Support only %f format
+// Comment to support all formats: %d %x ...
+#define ONLY_F 1
+
 // ASCII character set... 
 #define NUL         0x00
 #define STX         0x02
@@ -76,8 +80,10 @@ static const double round_nums[8] = {
 static void printchar (char **str, int c);
 static void dbl2stri(char *outbfr, double dbl, unsigned dec_digits);
 static int prints (char **out, const char *string, int width, int pad);
+#ifndef ONLY_F
 static int printi (char **out, int i, uint base, int sign, int width, int pad, int letbase);
 static int printlli (char **out, long long i, uint base, int sign, int width, int pad, int letbase);
+#endif
 static int print (char **out, int *varg);
 
 #ifdef TEST_PRINTF
