@@ -585,6 +585,11 @@
               <FileType>1</FileType>
               <FilePath>.\Source\debug.c</FilePath>
             </File>
+            <File>
+              <FileName>printf2.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\printf2.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -1185,6 +1190,11 @@
               <FileName>debug.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Source\debug.c</FilePath>
+            </File>
+            <File>
+              <FileName>printf2.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\printf2.c</FilePath>
             </File>
           </Files>
         </Group>

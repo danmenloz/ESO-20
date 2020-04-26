@@ -13,6 +13,7 @@
 #include "DMA.h"
 #include "gpio_defs.h"
 #include "debug.h"
+#include "printf2.h"
 
 #include "ST7789.h"
 #include "T6963.h"
@@ -107,11 +108,11 @@ void Thread_Read_TS(void * arg) {
 		read_full_xyz();
 		convert_xyz_to_roll_pitch();
 
-		sprintf(buffer, "Roll: %6.2f", roll);
+		stringf(buffer, "Roll: %6.2f", roll);
 		osMutexAcquire(LCD_mutex, osWaitForever);
 		LCD_Text_PrintStr_RC(2, 0, buffer);
 		osMutexRelease(LCD_mutex);
-		sprintf(buffer, "Pitch: %6.2f", pitch);
+		stringf(buffer, "Pitch: %6.2f", pitch);
 		osMutexAcquire(LCD_mutex, osWaitForever);
 		LCD_Text_PrintStr_RC(3, 0, buffer);
 		osMutexRelease(LCD_mutex);
